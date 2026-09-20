@@ -1,0 +1,23 @@
+{
+  "plan_name": "Short-side Supply Zone Rejection",
+  "bias": "short",
+  "max_trades_per_day": 3,
+  "risk_per_trade_percent": 1.0,
+  "reward_risk_ratio": 2.0,
+  "rules": [
+    "Only trade when price mitigates a marked supply zone",
+    "Wait for a shooting star candle on the zone",
+    "Confirm with multi-wick rejection (multiple upper wicks stalling at the zone)",
+    "Confirm with fast MA crossing below slow MA",
+    "No trade if a high-impact news event is within 30 minutes"
+  ],
+  "supply_zones": {
+    "frxEURUSD": [
+      { "zone_low": 1.0850, "zone_high": 1.0880, "note": "Daily supply, untested" }
+    ],
+    "frxGBPUSD": [
+      { "zone_low": 1.2700, "zone_high": 1.2740, "note": "4H supply" }
+    ]
+  },
+  "notes": "Edit supply_zones for each symbol you trade. The bot only evaluates zones you've defined here — it does not invent them."
+}
